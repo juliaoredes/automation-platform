@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: automation-platform
+  datasource:
+    url: jdbc:h2:mem:automationdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3
+  springdoc:
+    swagger-ui:
+      path: /swagger-ui.html
